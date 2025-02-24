@@ -77,10 +77,13 @@ return (
     longitudeDelta,}}
     ref={mapRef}
     onRegionChangeComplete={handleRegionChangeComplete}
+    moveOnMarkerPress={false}
   >
  {results.map((station) =>
-  <Marker coordinate={{latitude: station.geometry.coordinates[1], longitude: station.geometry.coordinates[0]}}/>
-)
+
+  <Marker key={station.properties.ID} title={station.properties.Nimi} 
+  description={station.properties.Osoite} 
+  coordinate={{latitude: station.geometry.coordinates[1], longitude: station.geometry.coordinates[0]}}/>)
 }
 <StatusBar style="auto" />
 </MapView>
