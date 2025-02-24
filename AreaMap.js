@@ -76,7 +76,7 @@ return (
     latitudeDelta,
     longitudeDelta,}}
     ref={mapRef}
-    onRegionChangeComplete={handleRegionChangeComplete}
+    onRegionChange={handleRegionChangeComplete}
     moveOnMarkerPress={false}
   >
  {results.map((station) =>
